@@ -52,7 +52,6 @@ var multiplyThreeNumber = a * b * c;
 var questionSumAndMultiply = [sumThreeNumber, multiplyThreeNumber,
                                a + ' ' + 'and' + ' ' + b + ' ' + 'and' + ' ' + c + ' ' + 'sum to' + ' ' + sumThreeNumber + '.',
                               'The product of' + ' ' + a + ' '+ 'and' + ' ' + b + ' ' + 'and' + ' ' + c + ' ' + 'is' + ' ' + multiplyThreeNumber + '.',];
-console.log (questionSumAndMultiply);
 return questionSumAndMultiply;
 }
 testSumAndMultiply(4, 7, 5);
@@ -70,11 +69,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 var testArray = [2,3,4]; //eslint-disable-line
-
+var sumNumber = 0;
 function sumArray(testArray){ //eslint-disable-line
-
+  for (var i = 0; i < testArray.length; i++){
+      sumNumber += testArray[i];
+  }
+  var questionSumArray = [sumNumber, testArray[0]+ ','+testArray[1]+','+ testArray[2] + ' ' + 'was passed in as an array of numbers, and'+' '+ sumNumber+' '+'is their sum.']
+  return questionSumArray;
 }
-
+testSumArray(testArray);
 // Here is the test for sumArray(); uncomment it to run it
 
 // testSumArray(testArray);
