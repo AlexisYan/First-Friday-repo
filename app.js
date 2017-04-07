@@ -47,11 +47,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-var sumThreeNumber = a + b + c;
-var multiplyThreeNumber = a * b * c;
-var questionSumAndMultiply = [sumThreeNumber, multiplyThreeNumber,
-                               a + ' ' + 'and' + ' ' + b + ' ' + 'and' + ' ' + c + ' ' + 'sum to' + ' ' + sumThreeNumber + '.',
-                              'The product of' + ' ' + a + ' '+ 'and' + ' ' + b + ' ' + 'and' + ' ' + c + ' ' + 'is' + ' ' + multiplyThreeNumber + '.',];
+var newSum = sum(sum(a,b)[0],c)[0];
+var newMultiply = multiply(multiply(a,b)[0], c)[0];
+var questionSumAndMultiply = [newSum, newMultiply,
+                               a + ' ' + 'and' + ' ' + b + ' ' + 'and' + ' ' + c + ' ' + 'sum to' + ' ' + newSum + '.',
+                              'The product of' + ' ' + a + ' '+ 'and' + ' ' + b + ' ' + 'and' + ' ' + c + ' ' + 'is' + ' ' + newMultiply + '.'];
+console.log(questionSumAndMultiply);
 return questionSumAndMultiply;
 }
 testSumAndMultiply(4, 7, 5);
@@ -68,16 +69,7 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-var testArray = [2,3,4]; //eslint-disable-line
-var sumNumber = 0;
-function sumArray(testArray){ //eslint-disable-line
-  for (var i = 0; i < testArray.length; i++){
-      sumNumber += testArray[i];
-  }
-  var questionSumArray = [sumNumber, testArray[0]+ ','+testArray[1]+','+ testArray[2] + ' ' + 'was passed in as an array of numbers, and'+' '+ sumNumber+' '+'is their sum.']
-  return questionSumArray;
-}
-testSumArray(testArray);
+
 // Here is the test for sumArray(); uncomment it to run it
 
 // testSumArray(testArray);
