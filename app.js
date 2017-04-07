@@ -47,9 +47,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-
+var sumThreeNumber = a + b + c;
+var multiplyThreeNumber = a * b * c;
+var questionSumAndMultiply = [sumThreeNumber, multiplyThreeNumber,
+                               a + ' ' + 'and' + ' ' + b + ' ' + 'and' + ' ' + c + ' ' + 'sum to' + ' ' + sumThreeNumber + '.',
+                              'The product of' + ' ' + a + ' '+ 'and' + ' ' + b + ' ' + 'and' + ' ' + c + ' ' + 'is' + ' ' + multiplyThreeNumber + '.',];
+console.log (questionSumAndMultiply);
+return questionSumAndMultiply;
 }
-
+testSumAndMultiply(4, 7, 5);
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
 
