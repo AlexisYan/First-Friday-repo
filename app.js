@@ -9,7 +9,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 function sum(a,b){ //eslint-disable-line
   var sumAB = a + b;
-  var questionSum = [sumAB, 'The sum of' + ' ' + a + ' ' + 'and' + ' ' + b + ' ' + 'is' + ' '+ sumAB + '.'];
+  var questionSum = [sumAB, 'The sum of' + ' ' + a + ' ' + 'and' + ' ' + b + ' ' + 'is' + ' ' + sumAB + '.'];
   return questionSum;
 }
 testSum (4, 7);
@@ -26,8 +26,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a,b){ //eslint-disable-line
-
+var multiplyAB = a * b;
+var questionMultiply = [multiplyAB, 'The product of' + ' ' + a + ' '+ 'and' + ' ' + b + ' ' + 'is' + ' ' + multiplyAB + '.'];
+return questionMultiply;
 }
+testMultiply(5, 9);
 
 // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5,9);
