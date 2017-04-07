@@ -52,7 +52,7 @@ var newMultiply = multiply(multiply(a,b)[0], c)[0];
 var questionSumAndMultiply = [newSum, newMultiply,
                                a + ' ' + 'and' + ' ' + b + ' ' + 'and' + ' ' + c + ' ' + 'sum to' + ' ' + newSum + '.',
                               'The product of' + ' ' + a + ' '+ 'and' + ' ' + b + ' ' + 'and' + ' ' + c + ' ' + 'is' + ' ' + newMultiply + '.'];
-console.log(questionSumAndMultiply);
+
 return questionSumAndMultiply;
 }
 testSumAndMultiply(4, 7, 5);
@@ -70,8 +70,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 var testArray = [2,3,4]; //eslint-disable-line
-var sumNumber = 0;
 function sumArray(testArray){ //eslint-disable-line
+  var sumNumber = 0;
   for (var i = 0; i < testArray.length; i++){
       sumNumber += testArray[i];
   }
@@ -95,8 +95,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
+  var newMultiplyArray = sumAndMultiply(testArray[0],testArray[1],testArray[2])[1];
+  var questionMultiplyArray = [newMultiplyArray, "The numbers" + ' ' + testArray[0] +','+testArray[1]+','+ testArray[2]
+                              +' '+'have a product of'+' '+ newMultiplyArray + '.'];
+  return questionMultiplyArray;
 
 }
+testMultiplyArray(2,3,4);
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(2,3,4);
