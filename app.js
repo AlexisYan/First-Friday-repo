@@ -47,12 +47,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-var sumThreeNumber = a + b + c;
-var multiplyThreeNumber = a * b * c;
-var questionSumAndMultiply = [sumThreeNumber, multiplyThreeNumber,
-                               a + ' ' + 'and' + ' ' + b + ' ' + 'and' + ' ' + c + ' ' + 'sum to' + ' ' + sumThreeNumber + '.',
-                              'The product of' + ' ' + a + ' '+ 'and' + ' ' + b + ' ' + 'and' + ' ' + c + ' ' + 'is' + ' ' + multiplyThreeNumber + '.',];
-console.log (questionSumAndMultiply);
+var newSum = sum(sum(a,b)[0], c)[0];
+var newMultiply = multiply(multiply(a,b)[0], c)[0];
+var questionSumAndMultiply = [newSum, newMultiply,
+                               a + ' ' + 'and' + ' ' + b + ' ' + 'and' + ' ' + c + ' ' + 'sum to' + ' ' + newSum + '.',
+                              'The product of' + ' ' + a + ' '+ 'and' + ' ' + b + ' ' + 'and' + ' ' + c + ' ' + 'is' + ' ' + newMultiply + '.',];
 return questionSumAndMultiply;
 }
 testSumAndMultiply(4, 7, 5);
